@@ -56,7 +56,7 @@ const res = arr.filter(r => r.prop === comparator);
 Example:
 
 ```rust
-let res = arr.iter().filter(|&r| r.prop == comparator);
+let res = arr.iter().filter(|&r| r.prop == comparator).collect::<Vec<_>>();
 ```
 
 ---
