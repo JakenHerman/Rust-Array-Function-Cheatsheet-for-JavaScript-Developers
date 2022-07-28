@@ -82,10 +82,10 @@ let res = arr.map(r => ({
 > Takes a closure and creates an iterator which calls that closure on each element.
 > 
 
-Example:
+Example (`SimplePerson` here is a [`struct`](https://doc.rust-lang.org/book/ch05-01-defining-structs.html)):
 
 ```rust
-let res = arr.map(|r| {
+let res = arr.map(|r| SimplePerson {
     name: r.display_name.clone(),
     family: r.family_name.clone(),
 });
