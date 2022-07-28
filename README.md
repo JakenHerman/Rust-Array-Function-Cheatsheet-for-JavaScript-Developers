@@ -74,7 +74,7 @@ Example:
 let res = arr.map(r => ({
     name: r.displayName,
     family: r.familyName
-});
+}));
 ```
 
 **Rust** documentation:
