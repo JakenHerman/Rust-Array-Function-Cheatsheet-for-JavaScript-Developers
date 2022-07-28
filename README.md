@@ -1,7 +1,7 @@
 # Rust Array Functions: A Cheatsheet for JavaScript Developers
 A cheatsheet on how to use common JavaScript instance methods in Rust.
 
-# Reduce
+# [Reduce](https://github.com/JakenHerman/Rust-Array-Function-Cheatsheet-for-JavaScript-Developers/tree/main/reduce)
 
 **JavaScript** documentation:
 
@@ -35,7 +35,7 @@ let res = arr.iter().reduce(|acc, obj| {
 
 ---
 
-# Filter
+# [Filter](https://github.com/JakenHerman/Rust-Array-Function-Cheatsheet-for-JavaScript-Developers/tree/main/filter)
 
 **JavaScript** documentation:
 
@@ -61,7 +61,7 @@ let res = arr.iter().filter(|&r| r.prop == comparator).collect::<Vec<_>>();
 
 ---
 
-# Map
+# [Map](https://github.com/JakenHerman/Rust-Array-Function-Cheatsheet-for-JavaScript-Developers/tree/main/map)
 
 **JavaScript** documetation:
 
@@ -89,4 +89,29 @@ let res = arr.map(|r| {
     name: r.display_name.clone(),
     family: r.family_name.clone(),
 });
+```
+
+---
+
+# [Sort](https://github.com/JakenHerman/Rust-Array-Function-Cheatsheet-for-JavaScript-Developers/tree/main/sort)
+
+**JavaScript** documentation:
+> The reference to the original array, now sorted. Note that the array is sorted in place, and no copy is made.
+>
+
+Example:
+
+```jsx
+const res = arr.sort((a, b) => a.prop - b.prop);
+```
+
+**Rust** documentation:
+
+> Sorts the slice.
+>
+
+Example (Note that we're mutating `arr`):
+
+```rust
+arr.sort_by(|a, b| a.prop.cmp(&b.prop));
 ```
